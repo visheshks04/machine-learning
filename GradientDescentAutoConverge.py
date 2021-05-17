@@ -18,7 +18,7 @@ def gradient_descent(X, y):
     while abs(prev_error-mean_squared_error)>threshold: # The line gets fixed for as long as the difference exceeds a certain threshold
 
         prev_error = mean_squared_error
-        mean_squared_error = sum(y - (m*X + b))/n
+        mean_squared_error = sum((y - (m*X + b))**2)/n
         derivative_m = (-2/n)*sum(X*(y - (m*X + b)))
         derivative_b = (-2/n)*sum(y - (m*X + b))
     
