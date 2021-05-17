@@ -11,7 +11,7 @@ def gradient_descent(X, y):
 
     for _ in range(iterations):
 
-        mean_squared_error = sum(y - (m*X + b))/n
+        mean_squared_error = sum((y - (m*X + b))**2)/n
         derivative_m = (-2/n)*sum(X*(y - (m*X + b)))
         derivative_b = (-2/n)*sum(y - (m*X + b))
     
