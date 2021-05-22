@@ -11,11 +11,10 @@ def gradient_descent(X, y):
 
     learning_rate = 0.001
 
-    prev_error = 99999999999999
+    prev_error = 1
     mean_squared_error = 0
-    threshold = 0.0000001
 
-    while abs(prev_error-mean_squared_error)>threshold: # The line gets fixed for as long as the difference exceeds a certain threshold
+    while abs(prev_error-mean_squared_error)>0: # The line gets fixed for as long as the difference exceeds a certain threshold
 
         prev_error = mean_squared_error
         mean_squared_error = sum((y - (m*X + b))**2)/n
