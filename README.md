@@ -1,1 +1,1 @@
-# least-squares-method
+# machine-learning
